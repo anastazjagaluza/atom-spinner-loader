@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Atom spinner loader</title>
+</head>
+<body>
+    <h1>Click on the button to see the loader, then click on the loader to make it disappear</h1>
+    <button>See the loader</button>
+    <atom-spinner-loader id="loader"></atom-spinner-loader>
+    <script>
+            let loader = document.querySelector("#loader");
+            document.querySelector("button").addEventListener("click", function(){
+             
+                loader.visible = true;
+                console.log(loader.visible);
+            });
+       loader.addEventListener("click", ()=>{
+        loader.visible = false;
+       })
+           </script>
+    <script type="module" src="lib/index.js">
+        </script>
+        
+</body>
+</html>
